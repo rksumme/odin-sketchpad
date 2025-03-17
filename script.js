@@ -9,6 +9,10 @@ function createDivs(num) {
             const cell = document.createElement('div');
             cell.classList.add('grid-cell');
 
+            cell.addEventListener('mouseover', function() {
+                cell.style.backgroundColor = "purple";
+            })
+
             row.appendChild(cell);
         }
 
@@ -16,21 +20,9 @@ function createDivs(num) {
     }
 }
 
-createDivs(16);
+function getGrid () {
+    number = prompt("Please enter the size of grid you want to draw with:")
+}
 
-// function createDivs(col) {
-//     let e = document.container;
-//     for (let i = 0; i < col; i++) {
-//         let row = document.createElement("div");
-//         row.className = "row";
-//         for (let x = 1; x <= col; x++) {
-//             let cell = document.createElement("div");
-//             cell.className = "square";
-//             cell.innerText = (i * col) + x;
-//             row.appendChild(cell);
-//         }
-//         e.appendChild(row);
-//     }
-// }
-
-// createDivs(16);
+getGrid();
+createDivs(number);
